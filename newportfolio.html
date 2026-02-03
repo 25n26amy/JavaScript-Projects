@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GP's Portfolio</title>
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sample_portfolio.css">
+</head>
+
+<body class="Background">   
+
+    <!-- Navbar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+    </div>
+
+    <!-- Background video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Video Text -->
+    <div class="Video_Text">
+        <h1 class="white-text">GP's Portfolio</h1>
+        <strong>
+            <p class="center">
+                I am a full-stack software and web developer who builds responsive, user-friendly, and dynamic web applications.
+                <br>
+                I work with HTML, CSS, and JavaScript for front-end development, and Python and SQL for back-end solutions.
+                <br><br>
+                I am a graduate of 
+                <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s
+                Software and Web Developer program. Feel free to reach out!
+            </p>
+        </strong>
+    </div>
+
+    <!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/jscsshtml.png" alt="HTML CSS JavaScript">
+                    <div class="text">
+                        Front-end development using HTML, CSS, and JavaScript to create interactive web experiences.
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/python.png" alt="Python">
+                    <div class="text">
+                        Python for back-end development, automation, and application logic.
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/sql.png" alt="SQL">
+                    <div class="text">
+                        SQL for database design, management, and data-driven applications.
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/contact.png" alt="Contact">
+                    <div class="text">
+                        Contact me at:<br>
+                        <strong>partiksandhu04@gmail.com</strong>
+                    </div>
+                </div>
+
+                <!-- Slideshow controls -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <br>
+
+            <!-- Dots -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <img src="images/about.png" alt="About Me">
+        </div>
+
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am a full-stack software and web developer with experience building clean, efficient, and scalable applications.
+                <br><br>
+                I am a graduate of The Tech Academy’s Software and Web Developer program and have hands-on experience with
+                HTML, CSS, JavaScript, Python, and SQL.
+                <br><br>
+                I am always open to new opportunities and collaborations.
+                <a onclick="openForm()" class="contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!-- GitHub Section -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p class="center">
+                View my projects and code on GitHub:
+                <br>
+                <a href="https://github.com/25n26amy" target="_blank">
+                    https://github.com/25n26amy
+                </a>
+            </p>
+        </div>
+
+        <div class="Column_2">
+            <a href="https://github.com/25n26amy" target="_blank">
+                <img src="images/github26.png" alt="GitHub Profile">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/xnqewrkw" method="POST" class="form-container">
+                <h1>Contact</h1>
+
+                <label><b>Name</b></label>
+                <input type="text" name="name" required>
+
+                <label><b>Email</b></label>
+                <input type="text" name="email" required>
+
+                <label><b>Message</b></label>
+                <input type="text" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="center">&copy; GP Portfolio</p>
+    </footer>
+
+    <script src="JS/sample_portfolio.js"></script>
+
+</body>
+</html>
